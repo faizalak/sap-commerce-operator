@@ -1,15 +1,15 @@
-apiVersion: v1
-kind: Namespace
-metadata:
-  labels:
-    control-plane: hybris-controller-manager
-  name: system
+#apiVersion: v1
+#kind: Namespace
+#metadata:
+#  labels:
+#    control-plane: hybris-controller-manager
+#  name: sap-commerce
 ---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: hybris-controller-manager
-  namespace: system
+  name: hybris-controller-manager-deployed-manually
+  namespace: sap-commerce
   labels:
     control-plane: hybris-controller-manager
 spec:
@@ -25,8 +25,9 @@ spec:
       containers:
       - command:
         - /manager
-        image: quay.io/redhat-sap-cop/hybris-operator:0.1
-        imagePullPolicy: IfNotPresent
+        #image: quay.io/redhat-sap-cop/hybris-operator:0.1
+        image: quay.io/fabdulkh/hybris-operator:0.1
+        imagePullPolicy: Always
         name: manager
         resources:
           limits:

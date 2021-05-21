@@ -36,7 +36,9 @@ import (
 	ctrl "sigs.k8s.io/controller-runtime"
 	"sigs.k8s.io/controller-runtime/pkg/client"
 
-	hybrisv1alpha1 "github.com/redhat-sap/sap-commerce-operator/api/v1alpha1"
+	//Changed for testing
+	hybrisv1alpha1 "github.com/faizalak/sap-commerce-operator/api/v1alpha1"
+	//hybrisv1alpha1 "github.com/redhat-sap/sap-commerce-operator/api/v1alpha1"
 
 	corev1 "k8s.io/api/core/v1"
 

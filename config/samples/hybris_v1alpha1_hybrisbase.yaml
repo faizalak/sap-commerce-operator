@@ -3,10 +3,24 @@ kind: HybrisBase
 metadata:
   name: hybrisbase-sample
 spec:
-  URL: http://nexus.redhat.com/nexus/service/local/repositories/releases/content/org/hybris/hybris/1.0/hybris-1.0.tar.gz
-  imageName: hybris-base
+  #URL: http://nexus-xieshen.apps.mw-ocp4.cloud.lab.eng.bos.redhat.com/nexus/service/local/repositories/releases/content/org/hybris/hybris/1811/hybris-1811.gz
+  #URL: http://nexus.apps.cluster-cbc2.cbc2.sandbox994.opentlc.com/repository/Releases/lennox/hybris/1.0/hybris-1.0.tar.gz
+  URL: http://nexus.apps.cluster-4958.4958.sandbox1543.opentlc.com/repository/releases/lennox/hybris-base-for-testing/1.0/hybris-base-for-testing-1.0.tar.gz
+  #imageName: hybris-base
+  imageName: hybris-base-for-testing
   imageTag: v0.1
-  jdkURL: https://github.com/SAP/SapMachine/releases/download/sapmachine-11.0.5/sapmachine-jdk-11.0.5-1.x86_64.rpm
-  password: admin123
+  #jdkURL: http://nexus.apps.cluster-cbc2.cbc2.sandbox994.opentlc.com/repository/Releases/lennox/java/1.8.0/java-1.8.0.rpm
+  jdkURL: http://nexus.apps.cluster-4958.4958.sandbox1543.opentlc.com/repository/releases/lennox/sapjvm/1.0/sapjvm-1.0.rpm
+  #jdkURL: https://github.com/SAP/SapMachine/releases/download/sapmachine-11.0.5/sapmachine-jdk-11.0.5-1.x86_64.rpm
+  #jdkURL: http://nexus-xieshen.apps.mw-ocp4.cloud.lab.eng.bos.redhat.com/nexus/service/local/repositories/releases/content/org/jdk/jdk/1.8.1/jdk-1.8.1-x64.rpm
+  password: admin
   username: admin
 
+  #URL: >-
+  #  http://nexus.apps.cluster-cbc2.cbc2.sandbox994.opentlc.com/repository/Releases/lennox/hybris/1.0/hybris-1.0.tar.gz
+  #jdkURL: >-
+  #  http://nexus.apps.cluster-cbc2.cbc2.sandbox994.opentlc.com/repository/Releases/lennox/java/1.8.0/java-1.8.0.rpm
+  #password: admin
+  #username: admin
+
+  #oc import-image --from=docker.io/fkhader/hybris-base-1811:v0.2 hybris-base:v0.2 --confirm
